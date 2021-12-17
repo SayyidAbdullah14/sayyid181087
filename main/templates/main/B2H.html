@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Konversi Biner ke Hexadesimal</title>
+{% endblock meta %}
+
+{% block content %}
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">Bilangan Biner</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input Bilangan Biner">
+</div>
+<button type="button" class="btn btn-success">Proses</button>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">Bilangan Hexadesimal</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+</div>
+{% endblock content %}
