@@ -6,13 +6,17 @@
 {% endblock meta %}
 
 {% block content %}
-<div class="mb-3">
-  <label for="formGroupExampleInput" class="form-label">Bilangan Biner</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input Bilangan Biner">
-</div>
-<button type="button" class="btn btn-success">Proses</button>
-<div class="mb-3">
-  <label for="formGroupExampleInput2" class="form-label">Bilangan Desimal</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
-</div>
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Bilangan Desimal</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input Bilangan Desimal"
+               name="masuk">
+    </div>
+    <button type="submit" class="btn btn-success">Proses</button>
+    <div class="mb-3">
+        <label for="formGroupExampleOutput2" class="form-label">Bilangan Biner</label>
+        <output type="string" class="form-control" id="formGroupExampleOutput2" name="keluar">Hasil</output>
+    </div>
+</form>
 {% endblock content %}
