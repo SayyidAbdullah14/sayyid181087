@@ -6,7 +6,7 @@
 {% endblock meta %}
 
 {% block content %}
-<form method="POST">
+<form method="post">
     {% csrf_token %}
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Bilangan Desimal</label>
@@ -16,7 +16,7 @@
     <button type="submit" class="btn btn-success">Proses</button>
     <div class="mb-3">
         <label for="formGroupExampleOutput2" class="form-label">Bilangan Biner</label>
-        <output type="string" class="form-control" id="formGroupExampleOutput2" name="keluar">Hasil</output>
+        <output type="text" class="form-control" id="formGroupExampleOutput2" name="keluar">{{keluar}}</output>
     </div>
 </form>
 {% endblock content %}
